@@ -50,6 +50,7 @@ namespace Library.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
     public ActionResult Details(int id)
     {
       var thisBook = _db.Books
@@ -60,6 +61,7 @@ namespace Library.Controllers
           .FirstOrDefault(book => book.BookId == id);
       return View(thisBook);
     }
+
     public ActionResult Edit(int id)
     {
       var thisBook = _db.Books.FirstOrDefault(books => books.BookId == id);
@@ -67,6 +69,7 @@ namespace Library.Controllers
       ViewBag.AuthorId = new SelectList(_db.Authors, "AuthorId", "FullName");
       return View(thisBook);
     }
+
     [HttpPost]
     public ActionResult Edit(Book book, int AuthorId, int GenreId)
     {
@@ -100,6 +103,7 @@ namespace Library.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
     public ActionResult AddAuthor(int id)
     {
       var thisBook = _db.Books.FirstOrDefault(book => book.BookId == id);
@@ -131,6 +135,7 @@ namespace Library.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
     [HttpPost]
     public ActionResult DeleteGenre(int joinId)
     {
@@ -139,6 +144,7 @@ namespace Library.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
     [HttpPost]
     public ActionResult DeleteAuthor(int joinId)
     {
