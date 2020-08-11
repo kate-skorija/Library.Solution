@@ -1,15 +1,51 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Library App</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="~/css/bootstrap:solar.css">
-    <link rel="stylesheet" href="~/css/styles.css">
-    
-</head>
+  <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Library App</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="~/css/bootstrap:solar.css">
+        <link rel="stylesheet" href="~/Css/styles.css">
+    </head>
     <body>
-    
-    @RenderBody()
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Library App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/books/index">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/authors/index">Authors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/genres/index">Genres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/books/create"> Add Book</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="/authors/create">Add Author</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="/genres/create">Add Genre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/genres/create">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/genres/create">Register</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      @RenderBody()
     </body>
-</html>
+  </html>

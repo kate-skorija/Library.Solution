@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Library.Models.Author
+
+<h3>Add a new author</h3>
+
+<hr />
+
+@using (Html.BeginForm())
+{
+  @Html.Label("Full Name")
+  @Html.TextBoxFor(model => model.FullName)
+  <input type="submit" value="Add a new Author" />
+}
