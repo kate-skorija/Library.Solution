@@ -17,6 +17,7 @@ namespace Library.Controllers
       _signInManager = signInManager;
       _db = db;
     }
+
     public ActionResult Index()
     {
       return View();
@@ -60,6 +61,7 @@ namespace Library.Controllers
         return View();
       }
     }
+
     [HttpPost]
     public async Task<ActionResult> LogOff()
     {
