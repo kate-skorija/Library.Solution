@@ -15,11 +15,9 @@ namespace Library.Controllers
   public class BooksController : Controller
   {
     private readonly LibraryContext _db;
-    private readonly UserManager<LibrarianUser> _userManager;
 
     public BooksController(UserManager<LibrarianUser> userManager, LibraryContext db)
     {
-      _userManager = userManager;
       _db = db;
     }
 

@@ -23,7 +23,7 @@ namespace Library.Controllers
 
     public ActionResult Index()
     {
-      return View(_db.Authors.ToList());
+      return View(_db.Authors.OrderBy(author => author.FullName).ToList());
     }
 
     public ActionResult Create()
