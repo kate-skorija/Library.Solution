@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Library.Models.Author
+
+<h3>Edit this author: @Html.DisplayFor(model => model.FullName)</h3>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.FullName)
+  @Html.EditorFor(model => model.FullName)
+
+  <input type="submit" value="Save" />
+}

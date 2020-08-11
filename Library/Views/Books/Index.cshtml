@@ -1,0 +1,35 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Library.Models;
+@model List<Library.Models.Book>;
+
+<h1>Books</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No books have been added yet!</h3>
+} 
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+    @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Publication Date</th>
+    </tr>  
+  </thead>
+  <tbody>
+@foreach (Book book in Model)
+{
+  <tr class="table-default">
+    <td>@Html.ActionLink($"{book.Title}", "Details", new { id = book.BookId })</td>
+    <td>@book.PublicationDate.ToShortString()</td>
+    <td>@Html.ActionLink($"{book.Title}", "Details", new { id = book.BookId })</td>
+  </tr>
+}
+  </tbody>
+</table>
